@@ -1,0 +1,27 @@
+.content {
+  margin: 0 auto;
+  width: 600px;
+  padding: 10px;
+}
+.profiles {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+div.content > .list-group {
+  width: 35%;
+}
+.card {
+  width: 60%;
+}
+.card-image {
+  --widthA: 100%;
+  display: flex;
+  height: var(--widthA);
+}
+/* .card-img-top {
+  width: auto;
+} */
+div.profiles > ul > li.list-group-item:hover {
+  cursor: pointer;
+}
