@@ -46,11 +46,13 @@ function useJsonFetch(url, options, get, state, setState) {
     fetch(url)
       .then(response => response.json())
       .then(json => {
-        setState(prev => ({
-          ...prev,
-          load: false,
-          [get]: (json.status || null),
-        }))
+        if (json) {
+          setState(prev => ({
+            ...prev,
+            load: false,
+            [get]: (json.status || null),
+          }))
+        }
       });
   }, options)
   return [state.data, state.load, state.error];
